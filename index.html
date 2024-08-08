@@ -11,6 +11,7 @@
 
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleproject.css">
 </head>
 
 <body>
@@ -19,14 +20,14 @@
         <!-- <i class="fas fa-times"></i>
         <i class="fas fa-bars"></i> -->
         <div class="nav-first">
-        <div class="first "><a href="#" id="first-link">FIrst</a></div>
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#service">SERVICES</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
+            <div class="first "><a href="#" id="first-link">FIrst</a></div>
+            <nav>
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#service">SERVICES</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
         </div>
         <div class="contact-nav">
 
@@ -78,55 +79,55 @@
                     template ZIP file on any other website. Please contact us for more info.</p>
             </div>
         </div>
-    
-    <div class="about-year">
-        <div class="info">
-            <div class="topic even">
-                <p>Information</p>
+
+        <div class="about-year">
+            <div class="info">
+                <div class="topic even">
+                    <p>Information</p>
+                </div>
+                <div class="head">
+                    <p class="head even">Name</p>
+                    <p class="head odd">Birthday</p>
+                    <p class="head even">Phone</p>
+                    <p class="head odd">Email</p>
+                </div>
+                <div class="value ">
+                    <p class="value even">Joshua Morgan</p>
+                    <p class="value odd"> Aug 12, 1986</p>
+                    <p class="value even"> 120-240-9600</p>
+                    <p class="value odd"> hello@josh.design</p>
+                </div>
             </div>
-            <div class="head">
-                <p class="head even">Name</p>
-                <p class="head odd">Birthday</p>
-                <p class="head even">Phone</p>
-                <p class="head odd">Email</p>
-            </div>
-            <div class="value ">
-                <p class="value even">Joshua Morgan</p>
-                <p class="value odd"> Aug 12, 1986</p>
-                <p class="value even"> 120-240-9600</p>
-                <p class="value odd"> hello@josh.design</p>
+            <div class="year">
+                <div class="bottum right">
+                    <p class="no">20+</p>
+                    <p class="head">Years of Experiences</p>
+                </div>
+                <div class="bottum">
+                    <p class="no">245</p>
+                    <p class="head">Happy Customers</p>
+                </div>
+                <div class="right">
+                    <p class="no">640</p>
+                    <p class="head">Project Finished</p>
+                </div>
+                <div>
+                    <p class="no">72+</p>
+                    <p class="head">Digital Awards</p>
+                </div>
             </div>
         </div>
-        <div class="year">
-            <div class="bottum right">
-                <p class="no">20+</p>
-                <p class="head">Years of Experiences</p>
-            </div>
-            <div class="bottum">
-                <p class="no">245</p>
-                <p class="head">Happy Customers</p>
-            </div>
-            <div class="right">
-                <p class="no">640</p>
-                <p class="head">Project Finished</p>
-            </div>
-            <div>
-                <p class="no">72+</p>
-                <p class="head">Digital Awards</p>
+        <div class="about-company">
+            <h2>Companies I've had worked</h2>
+            <div class="company">
+                <img src="img/cachet.svg" alt="">
+                <img src="img/guitar-center.svg" alt="">
+                <img src="img/tokico.svg" alt="">
+                <img src="img/shopify.svg" alt="">
+                <img src="img/profil-rejser.svg" alt="">
             </div>
         </div>
-    </div>
-    <div class="about-company">
-        <h2>Companies I've had worked</h2>
-        <div class="company">
-            <img src="img/cachet.svg" alt="">
-            <img src="img/guitar-center.svg" alt="">
-            <img src="img/tokico.svg" alt="">
-            <img src="img/shopify.svg" alt="">
-            <img src="img/profil-rejser.svg" alt="">
-        </div>
-    </div>
-</section>
+    </section>
     <section class="services" id="service">
         <div class="story-img ">
             <img class="profile" src="img/handshake-man-woman.jpg" alt="">
@@ -187,84 +188,57 @@
             </div>
         </div>
     </section>
+    <section class="Projects" id="projext">
+        <div class=" pro">
+            <img class="profile" src="img//white-desk-work-study-aesthetics.jpg" alt="">
+            <h3>Projects</h3>
+        </div>
+        <div class="all-p-box">
+            <div class="product-box">
+                <div class="brand">
+                    <span>Branding</span>
+                    <p>Zoik agency</p>
+                </div>
+                <img src="img/nikhil-KO4io-eCAXA-unsplash.jpg" alt="">
+            </div>
+            <div class="product-box">
+                <div class="brand">
+                    <span>Photography</span>
+                    <p>The Watch</p>
+                </div>
+                <img src="img/ball.jpg" alt="">
+            </div>
+            <div class="product-box">
+                <div class="brand">
+                    <span>Website</span>
+                    <p>Polo</p>
+                </div>
+                <img src="img/agency.jpg" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="preview-box">
 
 
+        <div class="slide prev"><i class="fa fa-caret-left" ></i></div>
+        <div class="slide next"><i class="fa fa-caret-right"></i></div>
 
-    <script>
-         
-         document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.querySelector('.fa-bars');
-    const closeIcon = document.querySelector('.fa-times');
-    const nav = document.querySelector('nav');
-    const header = document.querySelector('header');
+        <div class="image-box">
 
-    menuIcon.addEventListener('click', () => {
-        header.classList.add('expanded');
-        nav.classList.add('show');
-        menuIcon.style.display = 'none'; // Hide menu icon
-        closeIcon.style.display = 'block'; // Show close icon
-    });
+            <span class="icon fas fa-times"></span>
+            <img src="img/ball.jpg" alt="">
+            <span class="no-page">
+                <p class="current-img"></p> of <p class="total-img"></p>
+            </span>
+        </div>
+    </div>
 
-    closeIcon.addEventListener('click', () => {
-        header.classList.remove('expanded');
-        nav.classList.remove('show');
-        menuIcon.style.display = 'block'; // Show menu icon
-        closeIcon.style.display = 'none'; // Hide close icon
-    });
-});
+      <script src="javscript.js"></script>
+ 
 
-
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 0) {
-                header.classList.add('color');
-            } else {
-                header.classList.remove('color');
-            }
-        });
-    
-        let sections = document.querySelectorAll("section");
-        let navlinks = document.querySelectorAll("header nav a");
-    
-        window.onscroll = () => {
-            let top = window.scrollY;
-    
-            sections.forEach(sec => {
-                let offset = sec.offsetTop - 150;
-                let height = sec.offsetHeight;
-                let id = sec.getAttribute('id');
-    
-                if (top >= offset && top < offset + height) {
-                    navlinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href').includes(id)) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        };
-
-      
-        document.addEventListener('DOMContentLoaded', () => {
-    const firstLink = document.getElementById('first-link');
-
-    firstLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        // Add the fade-out effect to the body
-        document.body.style.transition = 'opacity 0.5s ease-out';
-        document.body.style.opacity = 0;
-
-        // Reload the page after a delay to allow the transition effect to complete
-        setTimeout(() => {
-            window.location.reload();
-        }, 500); // Duration matches the transition effect
-    });
-});
-
-
-    </script>
-    
 </body>
 
 </html>
