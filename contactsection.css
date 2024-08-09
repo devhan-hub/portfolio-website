@@ -1,0 +1,283 @@
+:root {
+    --clr-one: #14B789;
+    --clr-second: #535da1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a:hover {
+    background-color: white;
+    color: var(--clr-one);
+}
+
+p {
+    color: #777;
+    font-size: 1.15em;
+    line-height: 1.5em;
+}
+.contact-sec {
+    background-color: #f3f3f3;
+    padding: 100px 10px;
+}
+.wraper {
+    width: 98%;
+    max-width: 530px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.service-about-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.box-contact {
+    padding: 10px 30px;
+    background-color: white;
+    text-align: start;
+    border-radius: 5px;
+}
+form.box-contact {
+    background-color: #f3f3f3;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.say-hi {
+    max-width: 500px;
+    margin-bottom: 50px;
+
+}
+p.topic-p {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    margin: 35px 0 20px 0;
+}
+p a {
+    font-size: 1em;
+    color: #666;
+}
+
+.servie-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.servie-list a {
+    padding: 8px 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: #666;
+    transition: background-color .3s ease-in-out;
+    font-size: 0.85em;
+    text-align: center;
+}
+.social {
+    display: flex;
+    justify-content: flex-start;
+}
+.social a {
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-left: 10px;
+}
+
+.social a:hover,
+.servie-list a:hover {
+    background-color: var(--clr-one);
+    color: white;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.name, 
+.email ,.text-area {
+    position: relative;
+}
+
+input  , textarea{
+    display: block;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.15); 
+}
+
+textarea {
+    padding: 60px 0;
+}
+
+input {
+    padding: 18px;
+    border-radius: 5px;
+}
+
+.name label,
+.email label, .text-area label{
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    color: #666;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+input:focus ,textarea:focus {
+    outline-style: none;
+    box-shadow: none;
+    top: -10px;
+
+    & + label  {
+        top: 8px;
+        color: #777;
+        font-size: .8em;
+    }
+}
+
+.check-box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.check-title {
+    padding: 20px 8px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    color: #666;
+
+}
+.check-title.border {
+    border-color: var(--clr-one);
+}
+
+.check-title i {
+    color: var(--clr-one);
+}
+
+form .btn {
+    padding: 15px;
+    background-color: var(--clr-one);
+    text-align: center;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.2em;
+}
+
+form .btn:hover {
+    background-color: var(--clr-second);
+}
+
+input:hover,
+.check-title:hover,
+textarea:hover {
+    border-color: var(--clr-one);
+}
+footer {
+    padding: 40px 50px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: #222;
+    font-size: 1.1em;
+}
+
+
+footer p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+@media (min-width:776px) {
+    .wraper {
+        max-width: 700px;
+    }
+
+    .service-about-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .say-hi {
+        float: left;
+    }
+
+    .servie-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 90px;
+        gap: 10px;
+
+        a {
+            padding: 8px 15px;
+        }
+    }
+
+    .name-email {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .name,
+    .email {
+        width: 50%;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+@media(min-width:1000px) {
+    .wraper {
+        max-width: 950px;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    .service-about-contact {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .service-about-box {
+        gap: 0;
+    }
+
+    .service-about-box .box-contact {
+        padding: 30px;
+    }
+
+    .servie-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .check-box-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    form .btn {
+        width: 25%;
+        align-self: flex-end;
+    }
+
+}
