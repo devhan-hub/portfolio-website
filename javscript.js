@@ -127,3 +127,18 @@
 
             }
         }
+
+        // for selecting service in section contact
+
+        const btnlist = document.querySelectorAll(".check-title");
+
+        btnlist.forEach(btnEL => {
+            btnEL.addEventListener('click', () => {
+                if (btnEL.classList.contains("border")) {
+                    btnEL.classList.remove("border");
+                } else {
+                    btnEL.classList.add("border");
+                }
+            });
+          
+        });
