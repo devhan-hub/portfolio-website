@@ -1,0 +1,222 @@
+.menu-icon {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    width: 32px;
+    height: 19px;
+    position: relative;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #111;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) { top: 0; }
+.menu-icon span:nth-child(2) { top: 50%; }
+.menu-icon span:nth-child(3) { bottom: 0; }
+
+
+header.expanded .menu-icon span:nth-child(1),
+header.expanded .menu-icon span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header.expanded .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+
+header.expanded.stage2 .menu-icon span:nth-child(1) {
+    transform: rotate(-45deg);
+}
+
+header.expanded.stage2 .menu-icon span:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+
+header {
+    max-width: 530px;
+    margin: 0 auto;
+    background-color:white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:15px 25px;
+    position: fixed;
+    left: 4%;
+    right: 4%;
+    top: 25px;
+    border-radius: 8px;
+    z-index: 10;
+    height: 4.9rem;
+    transition: height .5s ease;  
+}
+
+   /* class added by javascript */
+header.expanded {
+    height: 17em;
+}
+
+header .first-link {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 5px;
+}
+ .contact-nav {
+    display: flex;
+    gap: 15px;
+}
+.contact-nav .fa-phone {
+    color: white;
+    background-color:var(--clr-one);
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1em;
+}
+
+.contact-nav .phone-no {
+     
+    color: var(--clr-one);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding:10px 15px;
+    border: 2px solid var(--clr-one);
+    border-radius: 25px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-right: 5px;
+    transition:box-shadow .5s ease-in-out;
+}
+
+.contact-nav .phone-no:hover  {
+    border: none;
+   box-shadow: 10px 5px 20px #ddd;
+   background-color: rgba(255, 255, 255, 1);
+}
+nav {
+    display: none;
+    transition: opacity 0.5s ease;
+}
+/* class show added in nav by js */
+nav.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    right: 0;
+    top: 5rem;
+    gap: 25px;
+}
+
+nav a {
+    color: #444;
+    font-size: 0.7em;
+}
+ 
+nav a:hover, nav a.active {
+    color: var(--clr-one);
+    text-decoration: underline var(--clr-one) 2px;
+    text-underline-offset: 12px;
+}
+@media (min-width:786px) {
+    header { 
+        max-width: 730px;
+    }
+}
+
+@media (min-width:1010px) {
+
+    .menu-icon{
+        display: none;
+    }
+    header,header.expanded {
+        max-width: 980px;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        transition: none;
+        height:5em;
+        gap: 100px;
+        left: 2%;
+        right: 2%;
+    }
+    .first-link a{
+        color: white;
+        padding: 0;
+    }
+
+    header.color{
+        
+        background-color:white ;
+        a {
+            color: #333;
+        }
+
+        .contact-nav .phone-no {
+            color: var(--clr-one);
+            border: 2px solid var(--clr-one);
+        }
+
+        .contact-nav .fa-phone {
+            color: white;
+            background-color:var(--clr-one);
+        }
+
+        .first-link a{
+            color: inherit;
+        }
+
+    }
+
+    nav,nav.show {
+        position: initial;
+        display: flex;
+        flex-direction: row;
+        gap: 40px; 
+    }
+    nav a {
+        color: white;
+        font-size:0.75em;
+    }
+    .contact-nav .phone-no {  
+      color: white;
+      border-color: white;
+      padding:12px 30px;
+    }
+    .contact-nav .phone-no:hover {
+        background-color: white;
+        color: var(--clr-one);
+    }
+
+    .contact-nav .fa-phone{
+        color: black;
+        background-color: white;
+    }
+    .nav-first {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 65px;
+    }
+
+   
+}

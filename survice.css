@@ -1,0 +1,270 @@
+.service-img {
+  gap: 0;
+  margin-bottom: 18px;
+  justify-content: center;
+}
+
+.service-img h3 {
+  letter-spacing: -2px;
+  font-size: 2.2em;
+}
+
+.services {
+  padding: 90px 15px 120px 15px;
+  background-color: #f2f2f2;
+}
+
+.wraper-inner {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+.second-box-group,
+.first-box-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.box {
+  height: 100vh;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  padding: 20px 50px;
+  border-radius: 22px;
+  position: relative;
+  border: 2px solid white;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.box .first {
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+
+}
+
+.first .web {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.2);
+}
+
+.first .web h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 30px 0 18px 0;
+}
+
+.first p {
+  color: #777;
+  font-size: 1.1em;
+  line-height: 25px;
+}
+
+.web .money {
+  display: inline-block;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 24px;
+  font-size: 0.9em;
+  color: white;
+  background-color: var(--clr-second);
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.money::after {
+  content: " ";
+  position: absolute;
+  top: -15px;
+  right: -25px;
+  width: 45px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--clr-one);
+  z-index: 5;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.globe-container {
+  max-width: 300px;
+  max-height: 380px;
+  width: 60%;
+  height: 100vh;
+  position: relative;
+  align-self: flex-end;
+}
+
+.globe {
+  position: absolute;
+  right: -130px;
+  bottom: -18%;
+  width: 98%;
+  height: 90vh;
+  margin: 0 auto;
+  transform: rotate(-35deg);
+  border: solid 1px rgba(97, 97, 97, 0.2);
+  overflow: hidden;
+  border-radius: 12px;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe i {
+  font-size: 6em;
+  transition: color 0.3s ease-in-out;
+  margin-bottom: 200px;
+  background: none;
+
+}
+
+.first .descover {
+  width: 150px;
+  padding: 10px;
+  border-radius: 28px;
+  border: solid 2px rgba(97, 97, 97, 0.2);
+  font-size: 1.01rem;
+  background-color: white;
+  color: #777;
+  font-weight: 550;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.first .descover:hover {
+  background-color: var(--clr-one);
+  color: white;
+  border: none;
+  padding: 12px;
+}
+
+.box:hover {
+  border-color: var(--clr-one);
+  box-shadow: 5px 5px 40px #bbb;
+}
+
+.box:hover .money::after {
+  background-color: var(--clr-second);
+}
+
+.box:hover .money {
+  background-color: var(--clr-one);
+}
+
+.box:hover .globe {
+  background-color: var(--clr-one);
+}
+
+.box:hover .first .globe i {
+  color: white;
+}
+
+@media (min-width:776px) {
+  .wraper-inner {
+    max-width: 710px;
+  }
+
+  .globe-container {
+    max-width: 320px;
+    max-height: 405px;
+
+  }
+
+}
+
+@media (min-width:1000px) {
+  .wraper-inner {
+    gap: 0;
+  }
+}
+
+@media (min-width:1010px) {
+
+  .wraper-inner {
+    max-width: 780px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .service-img {
+    grid-column: 1/3;
+
+    h3 {
+      font-size: 3em;
+    }
+  }
+
+  .globe-container {
+    width: 80%;
+    height: 400px;
+  }
+
+  .box-1 {
+    margin-top: 15%;
+    height: 95vh;
+  }
+  .box-4 .globe-container {
+    margin-top: -30px;
+  }
+
+  .first {
+    h2 {
+      font-size: 3em;
+    }
+
+    .descover {
+      width: 65%;
+      padding: 15px;
+      font-size: 1.15em;
+
+    }
+
+    .descover:hover {
+      padding: 17px;
+    }
+  }
+
+  .globe-container .globe i {
+    margin-top: -50px;
+  }
+
+  .box-4 .globe-container .globe i {
+    margin-top: 0;
+  }
+  .second-box-group,
+.first-box-group {
+  gap: 25px;
+}
+
+}
+
+@media (min-width:1210px) {
+  .wraper-inner {
+    max-width: 950px;
+  }
+
+  .first .descover {
+    width: 50%;
+    padding: 14px;
+  }
+
+  .globe {
+    width: 80%;
+  }
+
+}
