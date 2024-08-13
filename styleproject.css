@@ -1,5 +1,7 @@
-.Projects {
-   padding:100px 10px ;  
+#projects {
+   margin:100px auto ;
+   width: 98%;  
+   max-width: 520px;
 }
 .pro {
    display: flex;
@@ -9,8 +11,7 @@
    padding: 8px;
    background-color: var(--clr-one);
    border-radius: 12px;
-   max-width: 500px;
-   width: 96%;
+   width: 100%;
    margin: 0 auto 30px auto;
 }
 .pro h3 {
@@ -26,36 +27,36 @@
     object-fit: cover;
 
 }
-.all-p-box {
+ .all-p-box {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    width: 98%;
-    margin:  0 auto;
 }
 
-.Projects .product-box {
+.all-p-box .product-box {
     background-color: #f6f6f6;
-    padding:40px 35px;
+    padding:40px 45px;
     border-radius:20px ;
     overflow: hidden;
-    max-width: 450px;
     margin: 0 auto;
-    max-height: 100vh;  
+   height: 100%;
 } 
 
 .product-box img {
     border-radius:30px ;
-    transform: rotate(14deg);
+    transform: rotate(10deg);
     position: relative;
-    bottom: -90px;
-    left: -9px;
+    bottom: -100px;
+    left: -5px;
     transition: all .5s ease;
+    cursor: pointer;
 }
 .product-box .brand p {
     font-size: 2em;
     font-weight: 600;
-    margin-top:5px;
+    margin-top: 0;
+    margin-bottom:5px;
+    color: black;
 }
 .product-box .brand span {
     color: var(--clr-one);
@@ -80,13 +81,12 @@
     transform: translate(-50% , -50%);
     background-color:rgba(0, 0, 0, 0.8);
     width: 100%;
-    margin:8px 8px 0 8px ;
     height: 100vh;
     display: flex;
     align-items: center;
     align-items: center;
     z-index: 9999;
-    border :15px solid white; 
+    border-top :10px solid white; 
     cursor:pointer; 
     display: none;
 }
@@ -107,25 +107,25 @@
 .image-box img {
       width: 450px;
       height: 450px;
-     cursor: pointer;
+     cursor: zoom-out;
     margin: 0 auto;
   
 }
 .icon {
-    /* font-size: 24px; */
     color: white;
  
 }
 
  .image-box .no-page {
     display: flex;
-    color: #f3f3f3;
+    color:white;
     align-items: center;
     gap: 2px;
     font-size: 0.8em;
      
     p {
         margin: 0;
+        color: white;
     }
    
  } 
@@ -148,13 +148,13 @@
  .slide.next {
     right:5% ;
  }
- @media(min-width:576px){
-    
- }
+ 
  @media(min-width:776px){
-    .Projects {
+    #projects{
         max-width: 700px;
-        margin:0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
    .all-p-box {
         display: grid;
@@ -162,17 +162,19 @@
         gap: 30px;
       
    }
+   .product-box img {
+    bottom: -80px;
+    left: -25px;
+}
    .pro {
        margin:0  0 30px 0 ;
-       float: right;
        max-width: 450px;
    }
  } 
 
  @media(min-width:1010px){
-    .Projects {
+    #projects {
         max-width: 950px;
-        margin:0 auto;
     }
    .all-p-box {
         display: grid;
@@ -182,7 +184,12 @@
  
    .pro {
        margin:0  0 50px 0 ;
-       float: right;
        max-width: 550px;
    }
- } 
+ }
+ 
+ @media (min-width:1200px){
+    #projects {
+        max-width: 1130px;
+    }
+ }

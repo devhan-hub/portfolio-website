@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-a:hover {
+.contact-sec a:hover {
     background-color: white;
     color: var(--clr-one);
 }
@@ -17,7 +17,7 @@ p {
     font-size: 1.15em;
     line-height: 1.5em;
 }
-.contact-sec {
+#contact {
     background-color: #f3f3f3;
     padding: 100px 10px;
 }
@@ -116,12 +116,10 @@ input  , textarea{
 textarea {
     padding: 60px 0;
 }
-
 input {
     padding: 18px;
     border-radius: 5px;
 }
-
 .name label,
 .email label, .text-area label{
     position: absolute;
@@ -177,10 +175,12 @@ form .btn {
     border-radius: 30px;
     color: white;
     font-size: 1.2em;
+    transition: all .3s ease-in-out;
 }
 
 form .btn:hover {
     background-color: var(--clr-second);
+    color: white;
 }
 
 input:hover,
@@ -198,7 +198,9 @@ footer a {
     color: #222;
     font-size: 1.1em;
 }
-
+footer a:hover {
+    color: var(--clr-one);
+}
 
 footer p {
     display: inline-block;
@@ -245,24 +247,24 @@ footer p {
     }
 }
 
-@media(min-width:1000px) {
+@media(min-width:1010px) {
     .wraper {
         max-width: 950px;
-        width: 98%;
-        margin: 0 auto;
     }
 
     .service-about-contact {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
     }
 
     .service-about-box {
-        gap: 0;
+        gap: 1.5px;
+
     }
 
     .service-about-box .box-contact {
-        padding: 30px;
+        padding: 25px;
     }
 
     .servie-list {
@@ -280,4 +282,9 @@ footer p {
         align-self: flex-end;
     }
 
+}
+@media(min-width:1200px) {
+   .wraper {
+    max-width: 1150px;
+   }
 }

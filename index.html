@@ -10,18 +10,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+    <!-- <link rel="stylesheet" href="style_allpage.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleproject.css">
     <link rel="stylesheet" href="contactsection.css">
+    <link rel="stylesheet" href="survice.css">
+    <link rel="stylesheet" href="nav.css">
+
 </head>
 
 <body>
     <header>
-
-        <!-- <i class="fas fa-times"></i>
-        <i class="fas fa-bars"></i> -->
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="nav-first">
-            <div class="first " id="first-link"><a href="#">FIrst</a></div>
+            <div class="first-link " id="first-link"><a href="#">FIrst</a></div>
             <nav>
                 <a href="#home">HOME</a>
                 <a href="#about">ABOUT</a>
@@ -32,21 +38,20 @@
         </div>
         <div class="contact-nav">
 
-            <i class="fas fa-phone"></i>
+            <i class="fas fa-phone phone-icon"></i>
             <a href="#contact" class="phone-no ">120-240-9600</a>
         </div>
     </header>
 
-    <section class="home-cl" id="home">
-
+    <section id="home">
+     
+        <!-- for svg -->
         <div class="up"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#535da1" fill-opacity="1"
-                d="M0,224L48,234.7C96,245,192,267,288,234.7C384,203,480,117,576,85.3C672,53,768,75,864,112C960,149,1056,203,1152,229.3C1248,256,1344,256,1392,256L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-            </path>
-        </svg>
-
-        <div class="home-main">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 320">
+        <path fill="#535da1" fill-opacity="1" d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,208C624,235,672,245,720,240C768,235,816,213,864,186.7C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
+        <div class="home-box">
+        <div class="home-box-1">
 
             <div class="text-img">
                 <img class="profile" src="img/profile.jpg" alt="">
@@ -55,33 +60,36 @@
 
             <h2>I’m available for freelance work</h2>
 
-            <div class="button"><a href="#">Let's begin</a></div>
+          <a href="#" class="button-home">Let's begin</a>
         </div>
-        <div class="happy">
+        <div class="home-box-2">
             <div class="white-circle"></div>
             <img src="img/happy.png" alt="">
-
         </div>
-
+    </div>
     </section>
 
-    <section class="about" id="about">
+    <section  id="about">
+        <!-- <div class="wrapper-inner"> -->
         <img class="couple" src="img/couple-working.jpg" alt="">
         <div class="story">
-            <div class="story-img">
-                <h3>MyStory</h3>
+            <div class=" section-topic story-img">
+                <h3>My Story</h3> 
                 <img class="profile" src="img/profile.jpg" alt="">
             </div>
             <div class="about-text">
                 <h3>a little bit about Joshua</h3>
                 <p>This one-page HTML portfolio is provided by TemplateMo. This layout is based on Bootstrap v5.1.3 CSS
-                    and JS libraries. Image credits go to Unsplash and FreePik for images used in this page.</p>
+                    and JS libraries. Image credits go to <a href="https://unsplash.com/" target="_blank"> Unsplash</a>  and <a href="https://www.freepik.com/" target="_blank">FreePik</a>  for images used in this page.</p>
                 <p>You are allowed to use this template for your websites. You are not allowed to redistribute the
-                    template ZIP file on any other website. Please contact us for more info.</p>
+                    template ZIP file on any other website. Please <a href="https://templatemo.com/contact" target="_blank">contact us </a> for more info.</p>
             </div>
         </div>
-
-        <div class="about-year">
+        <!-- </div> -->
+</section>
+      
+<section class="expireance">
+    <div class="about-year">
             <div class="info">
                 <div class="topic even">
                     <p>Information</p>
@@ -95,29 +103,30 @@
                 <div class="value ">
                     <p class="value even">Joshua Morgan</p>
                     <p class="value odd"> Aug 12, 1986</p>
-                    <p class="value even"> 120-240-9600</p>
-                    <p class="value odd"> hello@josh.design</p>
+                    <p class="value even"><a href=""> 120-240-9600</a></p>
+                    <p class="value odd"> <a href="">hello@josh.design</a></p>
                 </div>
             </div>
             <div class="year">
                 <div class="bottum right">
                     <p class="no">20+</p>
-                    <p class="head">Years of Experiences</p>
+                    <p class="head type">Years of Experiences</p>
                 </div>
-                <div class="bottum">
+                <div class="bottum left">
                     <p class="no">245</p>
-                    <p class="head">Happy Customers</p>
+                    <p class="head type">Happy Customers</p>
                 </div>
                 <div class="right">
                     <p class="no">640</p>
-                    <p class="head">Project Finished</p>
+                    <p class="head type">Project Finished</p>
                 </div>
-                <div>
+                <div class="left">
                     <p class="no">72+</p>
-                    <p class="head">Digital Awards</p>
+                    <p class="head type">Digital Awards</p>
                 </div>
             </div>
         </div>
+    </section>
         <div class="about-company">
             <h2>Companies I've had worked</h2>
             <div class="company">
@@ -128,26 +137,30 @@
                 <img src="img/profil-rejser.svg" alt="">
             </div>
         </div>
-    </section>
+
+
+    <!-- section service -->
+
     <section class="services" id="service">
-        <div class="story-img ">
+        <div class="wraper-inner ">
+        <div class="story-img service-img">
             <img class="profile" src="img/handshake-man-woman.jpg" alt="">
             <h3>Services</h3>
         </div>
-        <div class="all-box">
-            <div class="first-box">
-                <div class="box">
+        <div class="first-box-group">
+                <div class="box box-1">
                     <div class="first">
                         <div class="web">
                             <h2>website</h2>
-                            <button class="money">$2,400</button>
+                            <a class="money">$2,400</a>
                         </div>
                         <p>You may want to explore Too CSS for great collection of free HTML CSS templates.</p>
                         <button class="descover">Discover More</button>
-                        <div class="globe"><i class="fas fa-globe"></i></div>
+                  
+                       <div class="globe-container"><div class="globe"><i class="fas fa-globe"></i></div></div> 
                     </div>
                 </div>
-                <div class="box">
+                <div class="box box-2">
                     <div class="first">
                         <div class="web">
                             <h2>Branding</h2>
@@ -156,12 +169,13 @@
                         <p>You can explore more CSS templates on TemplateMo website by browsing through different tags.
                         </p>
                         <button class="descover">Discover More</button>
-                        <div class="globe"><i class="fas fa-lightbulb"></i> </div>
-                    </div>
+                   
+                        <div class="globe-container"><div class="globe"><i class="fas fa-lightbulb"></i> </div></div>
+                    </div> 
                 </div>
             </div>
-            <div class="second-box">
-                <div class="box">
+            <div class="second-box-group">
+                <div class="box box-3">
                     <div class="first">
                         <div class="web">
                             <h2>Ecommerce</h2>
@@ -170,26 +184,29 @@
                         <p>If you need a customized ecommerce website for your business, feel free to discuss with
                             me.</p>
                         <button class="descover">Discover More</button>
-                        <div class="globe"><i class="fas fa-phone"></i></div>
-                    </div>
+                    
+                    <div class="globe-container"><div class="globe"><i class="fas fa-mobile-alt"></i></div></div>
                 </div>
-                <div class="box">
+            </div>
+                <div class="box  box-4">
                     <div class="first">
                         <div class="web">
                             <h2>SEO</h2>
                             <button class="money">$1,450</button>
                         </div>
                         <p>To list your website first on any search engine, we will work together. First Portfolio
-                            is one-page CSS Template for free download.You can explore more CSS templates on
-                            TemplateMo website by browsing through different tags.</p>
+                            is one-page CSS Template for free download.</p>
                         <button class="descover">Discover More</button>
-                        <div class="globe"><i class="fab fa-google"></i></div>
+                  
+                        <div class="globe-container"><div class="globe"><i class="fab fa-google"></i></div></div>
                     </div>
-                </div>
-            </div>
+                </div> 
+             </div>
         </div>
+       
     </section>
-    <section class="Projects" id="projext">
+    <section  id="projects">
+        
         <div class=" pro">
             <img class="profile" src="img//white-desk-work-study-aesthetics.jpg" alt="">
             <h3>Projects</h3>
@@ -216,8 +233,8 @@
                 </div>
                 <img src="img/agency.jpg" alt="">
             </div>
-        </div>
-        </div>
+           </div>
+      
 
     </section>
 
@@ -239,9 +256,9 @@
 
     <!-- section contact -->
 
-    <section class="contact-sec" id="contact">
+    <section id="contact">
         <div class="wraper">
-            <div class="say-hi pro">
+            <div class=" say-hi pro">
                 <img class="profile" src="img/cump.jpg" alt="">
                 <h3>Say Hi</h3>
             </div>
@@ -249,7 +266,7 @@
             <div class="service-about-contact">
                 <div class="service-about-box">
 
-                    <div class="box-contact box-service">
+                    <div class="box-contact">
 
                         <div class="service">
                             <p class="topic-p"> SERVICES</p>
@@ -279,7 +296,7 @@
 
                     </div>
                     <!-- firt box end -->
-                    <div class="box-contact box-about">
+                    <div class="box-contact">
                         <div>
                             <p class="topic-p">About</p>
                             <p>Joshua is a professional web developer. Feel free to get in touch with me.</p>
@@ -339,7 +356,7 @@
                     <a href="#" class="btn">Send</a>
                 </form>
             </div>
-        </div>
+            </div>
     </section>
     
          <!-- section footer -->

@@ -1,26 +1,28 @@
 
+        // header menu toggling
         document.addEventListener('DOMContentLoaded', () => {
-            const menuIcon = document.querySelector('.fa-bars');
-            const closeIcon = document.querySelector('.fa-times');
-            const nav = document.querySelector('nav');
+            const menuIcon = document.querySelector('.menu-icon');
             const header = document.querySelector('header');
-
+            const nav =document.querySelector("nav");
+        
             menuIcon.addEventListener('click', () => {
-                header.classList.add('expanded');
-                nav.classList.add('show');
-                menuIcon.style.display = 'none'; // Hide menu icon
-                closeIcon.style.display = 'block'; // Show close icon
-            });
-
-            closeIcon.addEventListener('click', () => {
-                header.classList.remove('expanded');
-                nav.classList.remove('show');
-                menuIcon.style.display = 'block'; // Show menu icon
-                closeIcon.style.display = 'none'; // Hide close icon
+                if (!header.classList.contains('expanded')) {
+                    header.classList.add('expanded');
+                    nav.classList.add("show");
+                    setTimeout(() => {
+                        header.classList.add('stage2');
+                    }, 300);
+                } else {
+                    header.classList.remove('stage2');
+                    setTimeout(() => {
+                        header.classList.remove('expanded');
+                        nav.classList.remove("show");
+                    }, 300);
+                }
             });
         });
-
-
+        
+    // mistekakel
         window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             if (window.scrollY > 0) {
@@ -58,15 +60,15 @@
 
             firstLink.addEventListener('click', (event) => {
                 event.preventDefault();
-                // Add the fade-out effect to the body
-                document.body.style.transition = 'opacity 0.5s ease-out';
-                document.body.style.opacity = 0;
+              
+                document.body.style.transition = 'display 0.5s ease-out';
+                document.body.style.display = "none";
 
-                // Reload the page after a delay to allow the transition effect to complete
                 setTimeout(() => {
                     window.location.reload();
-                }, 500); // Duration matches the transition effect
+                }, 400); 
             });
+          
         });
 
         const gallery = document.querySelectorAll(".product-box");
